@@ -17,7 +17,7 @@ public class ExtrairNumeros {
     }
 
     public List<Double> ExtrairNumerosDouble (String texto) {
-        Pattern p = Pattern.compile("\\d+");
+        Pattern p = Pattern.compile("(\\d+).(\\d+)");
         Matcher m = p.matcher(texto);
         while(m.find()) {
             numerosDouble.add(Double.parseDouble(m.group()));
