@@ -11,7 +11,7 @@ public class TesteLeitura {
 
     public static void main(String[] args) throws IOException {
 
-        File arquivoDeEntrada = new File("C:/Users/F8934921/OneDrive - Banco do Brasil S.A/Documentos/LetsCode/ProgWeb/projeto-lagar-letscode/arquivos-entrada/regras.txt");
+        File arquivoDeEntrada = new File("arquivos-entrada\regras.txt");
 
         FileInputStream fis = new FileInputStream(arquivoDeEntrada);
         
