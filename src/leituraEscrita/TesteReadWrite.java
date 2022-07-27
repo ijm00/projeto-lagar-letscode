@@ -15,12 +15,12 @@ public class TesteReadWrite {
 
     public static void main(String[] args) throws IOException {
 
-        File arquivoDeEntrada = new File("C:/Users/F8934921/OneDrive - Banco do Brasil S.A/Documentos/LetsCode/ProgWeb/projeto-lagar-letscode/arquivos-entrada/regras.txt");
+        File arquivoDeEntrada = new File("arquivos-entrada/regras.txt");
         FileInputStream fis = new FileInputStream(arquivoDeEntrada);
         InputStreamReader isr = new InputStreamReader(fis);
         BufferedReader br = new BufferedReader(isr);
 
-        File arquivoDeSaida = new File("C:/Users/F8934921/OneDrive - Banco do Brasil S.A/Documentos/LetsCode/ProgWeb/projeto-lagar-letscode/arquivos-entrada/resultado.txt");
+        File arquivoDeSaida = new File("arquivos-entrada/resultado.txt");
         OutputStream fos = new FileOutputStream(arquivoDeSaida);
         Writer osw = new OutputStreamWriter(fos);
         BufferedWriter bw = new BufferedWriter(osw);
