@@ -1,4 +1,4 @@
-package leituraEscrita;
+package escrita;
 import java.io.FileWriter;
 import java.io.IOException;
 
