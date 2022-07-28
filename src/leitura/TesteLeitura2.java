@@ -1,4 +1,4 @@
-package leituraEscrita;
+package leitura;
 
 import java.io.File;
 import java.util.Scanner;
@@ -15,12 +15,10 @@ public class TesteLeitura2 {
 
             Scanner linhaScanner = new Scanner(linha);
             linhaScanner.useDelimiter(" ");
-        
+            linhaScanner.close();
         
         }
-        
-        
-
+            
         scanner.close();
     }
     
