@@ -1,4 +1,5 @@
-package leituraEscrita;
+package escrita;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -10,7 +11,7 @@ import java.io.Writer;
 public class TesteEscrita {
     public static void main(String[] args) throws IOException {
 
-        File arquivoDeSaida = new File("C:/Users/F8934921/OneDrive - Banco do Brasil S.A/Documentos/LetsCode/ProgWeb/projeto-lagar-letscode/arquivos-entrada/resultado.txt");
+        File arquivoDeSaida = new File("arquivos-entrada/resultado.txt");
 
         OutputStream fos = new FileOutputStream(arquivoDeSaida);
         
