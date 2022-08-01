@@ -1,7 +1,4 @@
-import java.util.regex.Pattern;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Matcher;
+import leitura.Leitura;
 
 /*
 Crie uma aplicação que faça a gestão de transporte das plantações de azeitona até o lagar.
@@ -26,8 +23,12 @@ Deve então considerar data correta de 28/04/2022 tanto no arquivo de regras com
 
 
 public class App {
+
     public static void main(String[] args) throws Exception {
 
+        Leitura.lerEExtrairVariaveis();
+
+        /* 
         List<String> numeros = new ArrayList<>();
         
         Pattern p = Pattern.compile("(\\d+).(\\d+)");
@@ -39,12 +40,10 @@ public class App {
         for (String numero : numeros){
             System.out.println(numero);
         }
-
+        */
 
         
 
     }
 
-    //(\\w*)\\d+(\\w*)
-    // \t - tab
 }
