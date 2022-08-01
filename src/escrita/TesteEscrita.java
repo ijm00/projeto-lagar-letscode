@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class TesteEscrita {
     public static void main(String[] args) throws IOException {
@@ -25,6 +27,12 @@ public class TesteEscrita {
         
 
         bw.close();
+
+        var path = Path.of("arquivos-entrada", "nio-Teste.txt");
+
+        String texto = "bla bla bla";
+        Files.write(path, texto.getBytes());
+
 
 
     
