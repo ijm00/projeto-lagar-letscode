@@ -9,6 +9,9 @@ public class ProjetoLagarPatterns {
     public static void extrairVariaveisEntrada(String texto, VariaveisEntrada entrada) {
         extractVariedadesAzeitonas(texto, entrada);
         extractPlantacoesAzeitonas(texto, entrada);
+        extractGalega(texto, entrada);
+        extractCordovil(texto, entrada);
+        extractPicual(texto, entrada);
         extractCapacidadeRecepcao(texto, entrada);
         extractCapacidadeCaminhoes(texto, entrada);
         extractTempoCarregamentoCaminhoes(texto, entrada);
@@ -34,6 +37,34 @@ public class ProjetoLagarPatterns {
             entrada.setPlantacoesAzeitonas(Integer.parseInt(matcher.group(1)));
         }
     }
+
+    private static void extractGalega(String texto, VariaveisEntrada entrada) {
+        Pattern galegaPattern = Pattern.compile("(\\d+)( plantações de Galega com a distância de )(\\d+)( segundos para o lagar.)");
+        Matcher matcher = galegaPattern.matcher(texto);
+        while (matcher.find()) {
+            entrada.setPlantacoesGalega(Integer.parseInt(matcher.group(1)));
+            entrada.setDistanciaGalegaLagar(Integer.parseInt(matcher.group(3)));
+        }
+    }
+
+    private static void extractCordovil(String texto, VariaveisEntrada entrada) {
+        Pattern cordovilPattern = Pattern.compile("(\\d+)( plantações de Cordovil com a distância de )(\\d+)( segundos para o lagar.)");
+        Matcher matcher = cordovilPattern.matcher(texto);
+        while (matcher.find()) {
+            entrada.setPlantacoesCordovil(Integer.parseInt(matcher.group(1)));
+            entrada.setDistanciaCordovilLagar(Integer.parseInt(matcher.group(3)));
+        }
+    }
+
+    private static void extractPicual(String texto, VariaveisEntrada entrada) {
+        Pattern picualPattern = Pattern.compile("(\\d+)( plantação de Picual com a distância de )(\\d+)( segundos para o lagar.)");
+        Matcher matcher = picualPattern.matcher(texto);
+        while (matcher.find()) {
+            entrada.setPlantacoesPicual(Integer.parseInt(matcher.group(1)));
+            entrada.setDistanciaPicualLagar(Integer.parseInt(matcher.group(3)));
+        }
+    }
+
 
     private static void extractCapacidadeRecepcao(String texto, VariaveisEntrada entrada) {
         Pattern capacidadeRecepcaoLagarPattern = Pattern.compile("(\\d+)( Capacidades de Recepção)");
@@ -110,32 +141,3 @@ public class ProjetoLagarPatterns {
     }
 
 }
-
-/*
- * começar com a regra ^
- * terminar com a regra $
- * palavras \\w+
- * espaço \\s
- * muitas regras[]
- * uma ou mais +
- * nenhuma ou varias *
- * ignorar case (?i)
- * 
- * public static List<Integer> extrairVariaveisLagar (String texto) {
- * variaveisPatterns.keySet().forEach(key -> {
- * Matcher matcher = variaveisPatterns.get(key).matcher(texto);
- * while(matcher.find()) {
- * variaveisExtraidas.add(Integer.parseInt(matcher.group()));
- * }
- * });
- * return variaveisExtraidas;
- * }
- * 
- * String[] = texto.split(regex);
- * for (String palavra: palavras) {
- * System.out.o
- * }
- * 
- *
- * 
- */

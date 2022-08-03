@@ -1,6 +1,11 @@
 package lagares;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.concurrent.atomic.AtomicReference;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 
 import caminhoes.Caminhao;
 import caminhoes.FilaDeCaminhoes;
@@ -13,6 +18,8 @@ public class RecepcaoLagar {
         };
     }
 
+    private static AtomicReference<String> relatorioLog = new AtomicReference<>("");
+    
     public void descarregarCaminhoes() {
         Caminhao caminhao = FilaDeCaminhoes.getInstance().getFila().poll();
         if (caminhao != null) {
@@ -25,6 +32,7 @@ public class RecepcaoLagar {
 
                 synchronized (this) {
                     Relatorio.incrementarToneladasProcessadas(caminhao.getCapacidadeToneladas());
+                    relatorioLog.set(relatorioLog.get() + caminhao.getRelatorio().toString() + "\n");
                     System.out.println(caminhao.getRelatorio().toString());
                 }
 
@@ -32,6 +40,10 @@ public class RecepcaoLagar {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static void escreveRelatorio() throws IOException {
+        Files.writeString(Path.of("src\\relatorioFinal.txt"), relatorioLog.get(), StandardOpenOption.CREATE);
     }
     
 }

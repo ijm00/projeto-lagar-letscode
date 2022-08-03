@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,8 @@ import caminhoes.Caminhao;
 import caminhoes.FilaDeCaminhoes;
 import lagares.Lagar;
 import lagares.RecepcaoLagar;
+import leitura.Leitura;
+import leitura.VariaveisEntrada;
 import plantacoes.Azeitona;
 import plantacoes.Plantacao;
 
@@ -39,23 +42,34 @@ Deve então considerar data correta de 28/04/2022 tanto no arquivo de regras com
 public class App {
 
 
-    public static void main(String[] args) throws InterruptedException, ExecutionException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {
+        VariaveisEntrada entrada = new VariaveisEntrada();
+        try {
+            Leitura.lerEExtrairVariaveis(entrada);
+        } catch (IOException e1) {
+                     e1.printStackTrace();
+        }
+
         ConcurrentLinkedQueue<Caminhao> fila = FilaDeCaminhoes.getInstance().getFila();
 
         Azeitona azeitonaGalega = new Azeitona("Galega");
         Azeitona azeitonaCordovil = new Azeitona("Cordovil");
         Azeitona azeitonaPicual = new Azeitona("Picual");
 
-        Lagar lagar = new Lagar(3);
+        Lagar lagar = new Lagar(VariaveisEntrada.capacidadeRecepcaoLagarPattern);
         RecepcaoLagar recepcao = new RecepcaoLagar();
 
         List<Plantacao> plantacoes = new ArrayList<>() {
             {
-                add(new Plantacao(azeitonaGalega, 4));
-                add(new Plantacao(azeitonaGalega, 4));
-                add(new Plantacao(azeitonaCordovil, 3));
-                add(new Plantacao(azeitonaCordovil, 3));
-                add(new Plantacao(azeitonaPicual, 2));
+                for (int i = 0; i < VariaveisEntrada.plantacoesGalega; i++){
+                    add(new Plantacao(azeitonaGalega, VariaveisEntrada.distanciaGalegaLagar));
+                }
+                for (int i = 0; i < VariaveisEntrada.plantacoesCordovil; i++){
+                    add(new Plantacao(azeitonaCordovil, VariaveisEntrada.distanciaCordovilLagar));
+                }
+                for (int i = 0; i < VariaveisEntrada.plantacoesPicual; i++){
+                    add(new Plantacao(azeitonaPicual, VariaveisEntrada.distanciaPicualLagar));
+                }   
             }
         };
 
@@ -87,6 +101,8 @@ public class App {
         } finally {
             descarregarRestantes.shutdown();
         }
+
+        RecepcaoLagar.escreveRelatorio();
     }
 
 }

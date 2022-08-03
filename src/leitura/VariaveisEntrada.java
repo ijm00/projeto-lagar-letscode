@@ -1,131 +1,105 @@
 package leitura;
 public class VariaveisEntrada {
 
-    private int variedadesAzeitonas;
-    private int plantacoesAzeitonas;
-    private int capacidadeRecepcaoLagarPattern;
-    private int capacidadeMinimaCaminhao;
-    private int capacidadeMaximaCaminhao;
-    private int tempoMinimoCarregamentoCaminhao;
-    private int tempoMaximoCarregamentoCaminhao;
-    private int tempoMinimoProcessamentoCaminhao;
-    private int tempoMaximoProcessamentoCaminhao;
-    private int tempoCorrespondenciaToneladas;
-    private int pesoCorrespondenciaSegundos;
-    private int tamanhoMaximoFilaLagar;
-    private int tamanhoFilaRecomecoProcessamento;
-    private int tempoMaximoExecucao;
-
-    public int getVariedadesAzeitonas() {
-        return variedadesAzeitonas;
-    }
+    static int variedadesAzeitonas;
+    static int plantacoesAzeitonas;
+    public static int plantacoesGalega;
+    public static int distanciaGalegaLagar;
+    public static int plantacoesCordovil;
+    public static int distanciaCordovilLagar;
+    public static int plantacoesPicual;
+    public static int distanciaPicualLagar;
+    public static int capacidadeRecepcaoLagarPattern;
+    public static int capacidadeMinimaCaminhao;
+    public static int capacidadeMaximaCaminhao;
+    static int tempoMinimoCarregamentoCaminhao;
+    static int tempoMaximoCarregamentoCaminhao;
+    static int tempoMinimoProcessamentoCaminhao;
+    static int tempoMaximoProcessamentoCaminhao;
+    public static int tempoCorrespondenciaToneladas;
+    public static int pesoCorrespondenciaSegundos;
+    public static int tamanhoMaximoFilaLagar;
+    public static int tamanhoFilaRecomecoProcessamento;
+    static int tempoMaximoExecucao;
 
     public void setVariedadesAzeitonas(int variedadesAzeitonas) {
-        this.variedadesAzeitonas = variedadesAzeitonas;
-    }
-
-    public int getPlantacoesAzeitonas() {
-        return plantacoesAzeitonas;
+        VariaveisEntrada.variedadesAzeitonas = variedadesAzeitonas;
     }
 
     public void setPlantacoesAzeitonas(int plantacoesAzeitonas) {
-        this.plantacoesAzeitonas = plantacoesAzeitonas;
+        VariaveisEntrada.plantacoesAzeitonas = plantacoesAzeitonas;
     }
 
-    public int getCapacidadeRecepcaoLagarPattern() {
-        return capacidadeRecepcaoLagarPattern;
+    public void setPlantacoesGalega(int plantacoesGalega) {
+        VariaveisEntrada.plantacoesGalega = plantacoesGalega;
+    }
+    
+    public void setDistanciaGalegaLagar(int distanciaGalegaLagar) {
+        VariaveisEntrada.distanciaGalegaLagar = distanciaGalegaLagar;
+    }
+    
+    public void setPlantacoesCordovil(int plancacoesCordovil) {
+        VariaveisEntrada.plantacoesCordovil = plancacoesCordovil;
+    }
+    
+    public void setDistanciaCordovilLagar(int distanciaCordovilLagar) {
+        VariaveisEntrada.distanciaCordovilLagar = distanciaCordovilLagar;
+    }
+    
+    public void setPlantacoesPicual(int plantacoesPicual) {
+        VariaveisEntrada.plantacoesPicual = plantacoesPicual;
+    }
+    
+    public void setDistanciaPicualLagar(int distanciaPicualLagar) {
+        VariaveisEntrada.distanciaPicualLagar = distanciaPicualLagar;
     }
 
     public void setCapacidadeRecepcaoLagarPattern(int capacidadeRecepcaoLagarPattern) {
-        this.capacidadeRecepcaoLagarPattern = capacidadeRecepcaoLagarPattern;
-    }
-
-    public int getCapacidadeMinimaCaminhao() {
-        return capacidadeMinimaCaminhao;
+        VariaveisEntrada.capacidadeRecepcaoLagarPattern = capacidadeRecepcaoLagarPattern;
     }
 
     public void setCapacidadeMinimaCaminhao(int capacidadeMinimaCaminhao) {
-        this.capacidadeMinimaCaminhao = capacidadeMinimaCaminhao;
-    }
-
-    public int getCapacidadeMaximaCaminhao() {
-        return capacidadeMaximaCaminhao;
+        VariaveisEntrada.capacidadeMinimaCaminhao = capacidadeMinimaCaminhao;
     }
 
     public void setCapacidadeMaximaCaminhao(int capacidadeMaximaCaminhao) {
-        this.capacidadeMaximaCaminhao = capacidadeMaximaCaminhao;
-    }
-
-    public int getTempoMinimoCarregamentoCaminhao() {
-        return tempoMinimoCarregamentoCaminhao;
+        VariaveisEntrada.capacidadeMaximaCaminhao = capacidadeMaximaCaminhao;
     }
 
     public void setTempoMinimoCarregamentoCaminhao(int tempoMinimoCarregamentoCaminhao) {
-        this.tempoMinimoCarregamentoCaminhao = tempoMinimoCarregamentoCaminhao;
-    }
-
-    public int getTempoMaximoCarregamentoCaminhao() {
-        return tempoMaximoCarregamentoCaminhao;
+        VariaveisEntrada.tempoMinimoCarregamentoCaminhao = tempoMinimoCarregamentoCaminhao;
     }
 
     public void setTempoMaximoCarregamentoCaminhao(int tempoMaximoCarregamentoCaminhao) {
-        this.tempoMaximoCarregamentoCaminhao = tempoMaximoCarregamentoCaminhao;
-    }
-
-    public int getTempoMinimoProcessamentoCaminhao() {
-        return tempoMinimoProcessamentoCaminhao;
+        VariaveisEntrada.tempoMaximoCarregamentoCaminhao = tempoMaximoCarregamentoCaminhao;
     }
 
     public void setTempoMinimoProcessamentoCaminhao(int tempoMinimoProcessamentoCaminhao) {
-        this.tempoMinimoProcessamentoCaminhao = tempoMinimoProcessamentoCaminhao;
-    }
-
-    public int getTempoMaximoProcessamentoCaminhao() {
-        return tempoMaximoProcessamentoCaminhao;
+        VariaveisEntrada.tempoMinimoProcessamentoCaminhao = tempoMinimoProcessamentoCaminhao;
     }
 
     public void setTempoMaximoProcessamentoCaminhao(int tempoMaximoProcessamentoCaminhao) {
-        this.tempoMaximoProcessamentoCaminhao = tempoMaximoProcessamentoCaminhao;
-    }
-
-    public int getTempoCorrespondenciaToneladas() {
-        return tempoCorrespondenciaToneladas;
+        VariaveisEntrada.tempoMaximoProcessamentoCaminhao = tempoMaximoProcessamentoCaminhao;
     }
 
     public void setTempoCorrespondenciaToneladas(int tempoCorrespondenciaToneladas) {
-        this.tempoCorrespondenciaToneladas = tempoCorrespondenciaToneladas;
-    }
-
-    public int getPesoCorrespondenciaSegundos() {
-        return pesoCorrespondenciaSegundos;
+        VariaveisEntrada.tempoCorrespondenciaToneladas = tempoCorrespondenciaToneladas;
     }
 
     public void setPesoCorrespondenciaSegundos(int pesoCorrespondenciaSegundos) {
-        this.pesoCorrespondenciaSegundos = pesoCorrespondenciaSegundos;
-    }
-
-    public int getTamanhoMaximoFilaLagar() {
-        return tamanhoMaximoFilaLagar;
+        VariaveisEntrada.pesoCorrespondenciaSegundos = pesoCorrespondenciaSegundos;
     }
 
     public void setTamanhoMaximoFilaLagar(int tamanhoMaximoFilaLagar) {
-        this.tamanhoMaximoFilaLagar = tamanhoMaximoFilaLagar;
-    }
-
-    public int getTamanhoFilaRecomecoProcessamento() {
-        return tamanhoFilaRecomecoProcessamento;
+        VariaveisEntrada.tamanhoMaximoFilaLagar = tamanhoMaximoFilaLagar;
     }
 
     public void setTamanhoFilaRecomecoProcessamento(int tamanhoFilaRecomecoProcessamento) {
-        this.tamanhoFilaRecomecoProcessamento = tamanhoFilaRecomecoProcessamento;
-    }
-
-    public int getTempoMaximoExecucao() {
-        return tempoMaximoExecucao;
+        VariaveisEntrada.tamanhoFilaRecomecoProcessamento = tamanhoFilaRecomecoProcessamento;
     }
 
     public void setTempoMaximoExecucao(int tempoMaximoExecucao) {
-        this.tempoMaximoExecucao = tempoMaximoExecucao;
+        VariaveisEntrada.tempoMaximoExecucao = tempoMaximoExecucao;
     }
 
     

@@ -10,6 +10,7 @@ import caminhoes.Caminhao;
 import caminhoes.FilaDeCaminhoes;
 import caminhoes.FornecedorCaminhoes;
 import caminhoes.OrquestradorCaminhoes;
+import leitura.VariaveisEntrada;
 
 public class Plantacao {
     private Azeitona azeitona;
@@ -64,11 +65,11 @@ public class Plantacao {
                 this.despacharCaminhao();
             }
 
-            if (fila.get().size() >= 12) {
+            if (fila.get().size() >= VariaveisEntrada.tamanhoMaximoFilaLagar) {
                 this.suspenderProducao();
             }
 
-            if (!this.produzindo && fila.get().size() <= 4) {
+            if (!this.produzindo && fila.get().size() <= VariaveisEntrada.tamanhoFilaRecomecoProcessamento) {
                 this.retomarProducao();
             }
 
