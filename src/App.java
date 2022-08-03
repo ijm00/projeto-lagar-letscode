@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,7 @@ import caminhoes.Caminhao;
 import caminhoes.FilaDeCaminhoes;
 import lagares.Lagar;
 import lagares.RecepcaoLagar;
+import leitura.Leitura;
 import plantacoes.Azeitona;
 import plantacoes.Plantacao;
 
@@ -37,9 +39,10 @@ Deve então considerar data correta de 28/04/2022 tanto no arquivo de regras com
 
 
 public class App {
+    public static void main(String[] args) throws InterruptedException, IOException, ExecutionException {
+        
+        Leitura.lerEExtrairVariaveis();
 
-
-    public static void main(String[] args) throws InterruptedException, ExecutionException {
         ConcurrentLinkedQueue<Caminhao> fila = FilaDeCaminhoes.getInstance().getFila();
 
         Azeitona azeitonaGalega = new Azeitona("Galega");
