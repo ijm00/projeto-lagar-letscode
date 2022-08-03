@@ -61,12 +61,6 @@ public class App {
 
         final var inicioOperacao = LocalDateTime.now();
         
-<<<<<<< HEAD
-        Pattern p = Pattern.compile("(\\d+).(\\d+)");
-        Matcher m = p.matcher("string 123.489 more567string890");
-        while(m.find()) {
-            numeros.add(m.group());
-=======
         System.out.println("Iniciando execução...");
 
         ExecutorService descarregarCaminhoes = Executors.newFixedThreadPool(lagar.getNumeroPortasRecepcao());
@@ -75,7 +69,6 @@ public class App {
                 plantacao.produzir();
             }
             descarregarCaminhoes.execute(recepcao.descarregarCaminhoesTask());
->>>>>>> origin
         }
         descarregarCaminhoes.shutdown();
 
