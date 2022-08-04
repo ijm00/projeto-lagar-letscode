@@ -1,4 +1,7 @@
 package leitura;
+
+
+
 public class VariaveisEntrada {
 
     static int variedadesAzeitonas;
@@ -21,11 +24,11 @@ public class VariaveisEntrada {
     public static int tamanhoMaximoFilaLagar;
     public static int tamanhoFilaRecomecoProcessamento;
     public static int tempoMaximoExecucao;
+    public static String dataEntrada;
 
     public void setVariedadesAzeitonas(int variedadesAzeitonas) {
         VariaveisEntrada.variedadesAzeitonas = variedadesAzeitonas;
     }
-
     public void setPlantacoesAzeitonas(int plantacoesAzeitonas) {
         VariaveisEntrada.plantacoesAzeitonas = plantacoesAzeitonas;
     }
@@ -57,50 +60,48 @@ public class VariaveisEntrada {
     public void setCapacidadeRecepcaoLagarPattern(int capacidadeRecepcaoLagarPattern) {
         VariaveisEntrada.capacidadeRecepcaoLagarPattern = capacidadeRecepcaoLagarPattern;
     }
-
     public void setCapacidadeMinimaCaminhao(int capacidadeMinimaCaminhao) {
         VariaveisEntrada.capacidadeMinimaCaminhao = capacidadeMinimaCaminhao;
     }
-
     public void setCapacidadeMaximaCaminhao(int capacidadeMaximaCaminhao) {
         VariaveisEntrada.capacidadeMaximaCaminhao = capacidadeMaximaCaminhao;
     }
-
     public void setTempoMinimoCarregamentoCaminhao(int tempoMinimoCarregamentoCaminhao) {
         VariaveisEntrada.tempoMinimoCarregamentoCaminhao = tempoMinimoCarregamentoCaminhao;
     }
-
     public void setTempoMaximoCarregamentoCaminhao(int tempoMaximoCarregamentoCaminhao) {
         VariaveisEntrada.tempoMaximoCarregamentoCaminhao = tempoMaximoCarregamentoCaminhao;
     }
-
     public void setTempoMinimoProcessamentoCaminhao(int tempoMinimoProcessamentoCaminhao) {
         VariaveisEntrada.tempoMinimoProcessamentoCaminhao = tempoMinimoProcessamentoCaminhao;
     }
-
     public void setTempoMaximoProcessamentoCaminhao(int tempoMaximoProcessamentoCaminhao) {
         VariaveisEntrada.tempoMaximoProcessamentoCaminhao = tempoMaximoProcessamentoCaminhao;
     }
-
     public void setTempoCorrespondenciaToneladas(int tempoCorrespondenciaToneladas) {
         VariaveisEntrada.tempoCorrespondenciaToneladas = tempoCorrespondenciaToneladas;
     }
-
     public void setPesoCorrespondenciaSegundos(int pesoCorrespondenciaSegundos) {
         VariaveisEntrada.pesoCorrespondenciaSegundos = pesoCorrespondenciaSegundos;
     }
-
     public void setTamanhoMaximoFilaLagar(int tamanhoMaximoFilaLagar) {
         VariaveisEntrada.tamanhoMaximoFilaLagar = tamanhoMaximoFilaLagar;
     }
-
     public void setTamanhoFilaRecomecoProcessamento(int tamanhoFilaRecomecoProcessamento) {
         VariaveisEntrada.tamanhoFilaRecomecoProcessamento = tamanhoFilaRecomecoProcessamento;
     }
-
+    
     public void setTempoMaximoExecucao(int tempoMaximoExecucao) {
         VariaveisEntrada.tempoMaximoExecucao = tempoMaximoExecucao;
     }
+    
+    public static void setDataEntrada(String dataEntrada) {
+        VariaveisEntrada.dataEntrada = dataEntrada;
+    }
+
+    
+    
+    
 
     
     

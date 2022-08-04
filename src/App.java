@@ -40,8 +40,7 @@ Deve então considerar data correta de 28/04/2022 tanto no arquivo de regras com
 
 
 public class App {
-
-
+    
     public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {
         VariaveisEntrada entrada = new VariaveisEntrada();
         try {
