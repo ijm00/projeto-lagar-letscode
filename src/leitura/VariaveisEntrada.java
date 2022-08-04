@@ -20,7 +20,7 @@ public class VariaveisEntrada {
     public static int pesoCorrespondenciaSegundos;
     public static int tamanhoMaximoFilaLagar;
     public static int tamanhoFilaRecomecoProcessamento;
-    static int tempoMaximoExecucao;
+    public static int tempoMaximoExecucao;
 
     public void setVariedadesAzeitonas(int variedadesAzeitonas) {
         VariaveisEntrada.variedadesAzeitonas = variedadesAzeitonas;

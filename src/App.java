@@ -78,7 +78,7 @@ public class App {
         System.out.println("Iniciando execução...");
 
         ExecutorService descarregarCaminhoes = Executors.newFixedThreadPool(lagar.getNumeroPortasRecepcao());
-        while (LocalDateTime.now().isBefore(inicioOperacao.plusMinutes(2))) {
+        while (LocalDateTime.now().isBefore(inicioOperacao.plusMinutes(VariaveisEntrada.tempoMaximoExecucao))) {
             for (Plantacao plantacao : plantacoes) {
                 plantacao.produzir();
             }
