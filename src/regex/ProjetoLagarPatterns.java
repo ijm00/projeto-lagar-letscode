@@ -65,8 +65,11 @@ public class ProjetoLagarPatterns {
         }
     }
 
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> main
 
     private static void extractCapacidadeRecepcao(String texto, VariaveisEntrada entrada) {
         Pattern capacidadeRecepcaoLagarPattern = Pattern.compile("(\\d+)( Capacidades de Recepção)");
@@ -143,32 +146,3 @@ public class ProjetoLagarPatterns {
     }
 
 }
-
-/*
- * começar com a regra ^
- * terminar com a regra $
- * palavras \\w+
- * espaço \\s
- * muitas regras[]
- * uma ou mais +
- * nenhuma ou varias *
- * ignorar case (?i)
- * 
- * public static List<Integer> extrairVariaveisLagar (String texto) {
- * variaveisPatterns.keySet().forEach(key -> {
- * Matcher matcher = variaveisPatterns.get(key).matcher(texto);
- * while(matcher.find()) {
- * variaveisExtraidas.add(Integer.parseInt(matcher.group()));
- * }
- * });
- * return variaveisExtraidas;
- * }
- * 
- * String[] = texto.split(regex);
- * for (String palavra: palavras) {
- * System.out.o
- * }
- * 
- *
- * 
- */

@@ -1,146 +1,93 @@
 package leitura;
 public class VariaveisEntrada {
 
-    private int variedadesAzeitonas;
-    private int plantacoesAzeitonas;
-    private int plantacoesGalega;
-    private int distanciaGalegaLagar;
-    private int plantacoesCordovil;
-    private int distanciaCordovilLagar;
-    private int plantacoesPicual;
-    private int distanciaPicualLagar;
-    private int capacidadeRecepcaoLagar;
-    private int capacidadeMinimaCaminhao;
-    private int capacidadeMaximaCaminhao;
-    private int tempoMinimoCarregamentoCaminhao;
-    private int tempoMaximoCarregamentoCaminhao;
-    private int tempoMinimoProcessamentoCaminhao;
-    private int tempoMaximoProcessamentoCaminhao;
-    private int tempoCorrespondenciaToneladas;
-    private int pesoCorrespondenciaSegundos;
-    private int tamanhoMaximoFilaLagar;
-    private int tamanhoFilaRecomecoProcessamento;
-    private int tempoMaximoExecucao;
+    static int variedadesAzeitonas;
+    static int plantacoesAzeitonas;
+    public static int plantacoesGalega;
+    public static int distanciaGalegaLagar;
+    public static int plantacoesCordovil;
+    public static int distanciaCordovilLagar;
+    public static int plantacoesPicual;
+    public static int distanciaPicualLagar;
+    public static int capacidadeRecepcaoLagarPattern;
+    public static int capacidadeMinimaCaminhao;
+    public static int capacidadeMaximaCaminhao;
+    static int tempoMinimoCarregamentoCaminhao;
+    static int tempoMaximoCarregamentoCaminhao;
+    static int tempoMinimoProcessamentoCaminhao;
+    static int tempoMaximoProcessamentoCaminhao;
+    public static int tempoCorrespondenciaToneladas;
+    public static int pesoCorrespondenciaSegundos;
+    public static int tamanhoMaximoFilaLagar;
+    public static int tamanhoFilaRecomecoProcessamento;
+    public static int tempoMaximoExecucao;
 
-    public int getVariedadesAzeitonas() {
-        return variedadesAzeitonas;
-    }
     public void setVariedadesAzeitonas(int variedadesAzeitonas) {
-        this.variedadesAzeitonas = variedadesAzeitonas;
-    }
-    public int getPlantacoesAzeitonas() {
-        return plantacoesAzeitonas;
+        VariaveisEntrada.variedadesAzeitonas = variedadesAzeitonas;
     }
     public void setPlantacoesAzeitonas(int plantacoesAzeitonas) {
-        this.plantacoesAzeitonas = plantacoesAzeitonas;
+        VariaveisEntrada.plantacoesAzeitonas = plantacoesAzeitonas;
     }
-    public int getPlantacoesGalega() {
-        return plantacoesGalega;
-    }
+
     public void setPlantacoesGalega(int plantacoesGalega) {
-        this.plantacoesGalega = plantacoesGalega;
+        VariaveisEntrada.plantacoesGalega = plantacoesGalega;
     }
-    public int getDistanciaGalegaLagar() {
-        return distanciaGalegaLagar;
-    }
+    
     public void setDistanciaGalegaLagar(int distanciaGalegaLagar) {
-        this.distanciaGalegaLagar = distanciaGalegaLagar;
+        VariaveisEntrada.distanciaGalegaLagar = distanciaGalegaLagar;
     }
-    public int getPlantacoesCordovil() {
-        return plantacoesCordovil;
-    }
+    
     public void setPlantacoesCordovil(int plancacoesCordovil) {
-        this.plantacoesCordovil = plancacoesCordovil;
+        VariaveisEntrada.plantacoesCordovil = plancacoesCordovil;
     }
-    public int getDistanciaCordovilLagar() {
-        return distanciaCordovilLagar;
-    }
+    
     public void setDistanciaCordovilLagar(int distanciaCordovilLagar) {
-        this.distanciaCordovilLagar = distanciaCordovilLagar;
+        VariaveisEntrada.distanciaCordovilLagar = distanciaCordovilLagar;
     }
-    public int getPlantacoesPicual() {
-        return plantacoesPicual;
-    }
+    
     public void setPlantacoesPicual(int plantacoesPicual) {
-        this.plantacoesPicual = plantacoesPicual;
+        VariaveisEntrada.plantacoesPicual = plantacoesPicual;
     }
-    public int getDistanciaPicualLagar() {
-        return distanciaPicualLagar;
-    }
+    
     public void setDistanciaPicualLagar(int distanciaPicualLagar) {
-        this.distanciaPicualLagar = distanciaPicualLagar;
+        VariaveisEntrada.distanciaPicualLagar = distanciaPicualLagar;
     }
-    public int getCapacidadeRecepcaoLagar() {
-        return capacidadeRecepcaoLagar;
-    }
-    public void setCapacidadeRecepcaoLagar(int capacidadeRecepcaoLagar) {
-        this.capacidadeRecepcaoLagar = capacidadeRecepcaoLagar;
-    }
-    public int getCapacidadeMinimaCaminhao() {
-        return capacidadeMinimaCaminhao;
+
+    public void setCapacidadeRecepcaoLagarPattern(int capacidadeRecepcaoLagarPattern) {
+        VariaveisEntrada.capacidadeRecepcaoLagarPattern = capacidadeRecepcaoLagarPattern;
     }
     public void setCapacidadeMinimaCaminhao(int capacidadeMinimaCaminhao) {
-        this.capacidadeMinimaCaminhao = capacidadeMinimaCaminhao;
-    }
-    public int getCapacidadeMaximaCaminhao() {
-        return capacidadeMaximaCaminhao;
+        VariaveisEntrada.capacidadeMinimaCaminhao = capacidadeMinimaCaminhao;
     }
     public void setCapacidadeMaximaCaminhao(int capacidadeMaximaCaminhao) {
-        this.capacidadeMaximaCaminhao = capacidadeMaximaCaminhao;
-    }
-    public int getTempoMinimoCarregamentoCaminhao() {
-        return tempoMinimoCarregamentoCaminhao;
+        VariaveisEntrada.capacidadeMaximaCaminhao = capacidadeMaximaCaminhao;
     }
     public void setTempoMinimoCarregamentoCaminhao(int tempoMinimoCarregamentoCaminhao) {
-        this.tempoMinimoCarregamentoCaminhao = tempoMinimoCarregamentoCaminhao;
-    }
-    public int getTempoMaximoCarregamentoCaminhao() {
-        return tempoMaximoCarregamentoCaminhao;
+        VariaveisEntrada.tempoMinimoCarregamentoCaminhao = tempoMinimoCarregamentoCaminhao;
     }
     public void setTempoMaximoCarregamentoCaminhao(int tempoMaximoCarregamentoCaminhao) {
-        this.tempoMaximoCarregamentoCaminhao = tempoMaximoCarregamentoCaminhao;
-    }
-    public int getTempoMinimoProcessamentoCaminhao() {
-        return tempoMinimoProcessamentoCaminhao;
+        VariaveisEntrada.tempoMaximoCarregamentoCaminhao = tempoMaximoCarregamentoCaminhao;
     }
     public void setTempoMinimoProcessamentoCaminhao(int tempoMinimoProcessamentoCaminhao) {
-        this.tempoMinimoProcessamentoCaminhao = tempoMinimoProcessamentoCaminhao;
-    }
-    public int getTempoMaximoProcessamentoCaminhao() {
-        return tempoMaximoProcessamentoCaminhao;
+        VariaveisEntrada.tempoMinimoProcessamentoCaminhao = tempoMinimoProcessamentoCaminhao;
     }
     public void setTempoMaximoProcessamentoCaminhao(int tempoMaximoProcessamentoCaminhao) {
-        this.tempoMaximoProcessamentoCaminhao = tempoMaximoProcessamentoCaminhao;
-    }
-    public int getTempoCorrespondenciaToneladas() {
-        return tempoCorrespondenciaToneladas;
+        VariaveisEntrada.tempoMaximoProcessamentoCaminhao = tempoMaximoProcessamentoCaminhao;
     }
     public void setTempoCorrespondenciaToneladas(int tempoCorrespondenciaToneladas) {
-        this.tempoCorrespondenciaToneladas = tempoCorrespondenciaToneladas;
-    }
-    public int getPesoCorrespondenciaSegundos() {
-        return pesoCorrespondenciaSegundos;
+        VariaveisEntrada.tempoCorrespondenciaToneladas = tempoCorrespondenciaToneladas;
     }
     public void setPesoCorrespondenciaSegundos(int pesoCorrespondenciaSegundos) {
-        this.pesoCorrespondenciaSegundos = pesoCorrespondenciaSegundos;
-    }
-    public int getTamanhoMaximoFilaLagar() {
-        return tamanhoMaximoFilaLagar;
+        VariaveisEntrada.pesoCorrespondenciaSegundos = pesoCorrespondenciaSegundos;
     }
     public void setTamanhoMaximoFilaLagar(int tamanhoMaximoFilaLagar) {
-        this.tamanhoMaximoFilaLagar = tamanhoMaximoFilaLagar;
-    }
-    public int getTamanhoFilaRecomecoProcessamento() {
-        return tamanhoFilaRecomecoProcessamento;
+        VariaveisEntrada.tamanhoMaximoFilaLagar = tamanhoMaximoFilaLagar;
     }
     public void setTamanhoFilaRecomecoProcessamento(int tamanhoFilaRecomecoProcessamento) {
-        this.tamanhoFilaRecomecoProcessamento = tamanhoFilaRecomecoProcessamento;
-    }
-    public int getTempoMaximoExecucao() {
-        return tempoMaximoExecucao;
+        VariaveisEntrada.tamanhoFilaRecomecoProcessamento = tamanhoFilaRecomecoProcessamento;
     }
     public void setTempoMaximoExecucao(int tempoMaximoExecucao) {
-        this.tempoMaximoExecucao = tempoMaximoExecucao;
+        VariaveisEntrada.tempoMaximoExecucao = tempoMaximoExecucao;
     }
 
     

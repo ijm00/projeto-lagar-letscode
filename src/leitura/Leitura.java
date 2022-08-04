@@ -9,9 +9,7 @@ import regex.ProjetoLagarPatterns;
 
 public class Leitura {
 
-    public static void lerEExtrairVariaveis() throws IOException {
-
-        VariaveisEntrada entrada = new VariaveisEntrada();
+    public static void lerEExtrairVariaveis(VariaveisEntrada entrada) throws IOException {
         
         Path path = Paths.get("arquivos-entrada/regras.txt");
         Files.readAllLines(path).forEach(
