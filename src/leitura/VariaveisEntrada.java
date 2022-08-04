@@ -1,4 +1,7 @@
 package leitura;
+
+
+
 public class VariaveisEntrada {
 
     static int variedadesAzeitonas;
@@ -21,6 +24,7 @@ public class VariaveisEntrada {
     public static int tamanhoMaximoFilaLagar;
     public static int tamanhoFilaRecomecoProcessamento;
     public static int tempoMaximoExecucao;
+    public static String dataEntrada;
 
     public void setVariedadesAzeitonas(int variedadesAzeitonas) {
         VariaveisEntrada.variedadesAzeitonas = variedadesAzeitonas;
@@ -86,8 +90,13 @@ public class VariaveisEntrada {
     public void setTamanhoFilaRecomecoProcessamento(int tamanhoFilaRecomecoProcessamento) {
         VariaveisEntrada.tamanhoFilaRecomecoProcessamento = tamanhoFilaRecomecoProcessamento;
     }
+    
     public void setTempoMaximoExecucao(int tempoMaximoExecucao) {
         VariaveisEntrada.tempoMaximoExecucao = tempoMaximoExecucao;
+    }
+    
+    public static void setDataEntrada(String dataEntrada) {
+        VariaveisEntrada.dataEntrada = dataEntrada;
     }
 
     

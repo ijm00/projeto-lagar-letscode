@@ -2,11 +2,13 @@ package regex;
 
 import java.util.regex.Pattern;
 import leitura.VariaveisEntrada;
+
 import java.util.regex.Matcher;
 
 public class ProjetoLagarPatterns {
 
     public static void extrairVariaveisEntrada(String texto, VariaveisEntrada entrada) {
+        extractDataEntrada(texto, entrada);
         extractVariedadesAzeitonas(texto, entrada);
         extractPlantacoesAzeitonas(texto, entrada);
         extractGalega(texto, entrada);
@@ -20,6 +22,7 @@ public class ProjetoLagarPatterns {
         extractTamanhoMaximoFila(texto, entrada);
         extractTamanhoFilaReprocessamento(texto, entrada);
         extractTempoMaximoExecucao(texto, entrada);
+        
     }
 
     private static void extractVariedadesAzeitonas(String texto, VariaveisEntrada entrada) {
@@ -65,17 +68,12 @@ public class ProjetoLagarPatterns {
         }
     }
 
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> main
 
     private static void extractCapacidadeRecepcao(String texto, VariaveisEntrada entrada) {
         Pattern capacidadeRecepcaoLagarPattern = Pattern.compile("(\\d+)( Capacidades de Recepção)");
         Matcher matcher = capacidadeRecepcaoLagarPattern.matcher(texto);
         while (matcher.find()) {
-            entrada.setCapacidadeRecepcaoLagar((Integer.parseInt(matcher.group(1))));
+            entrada.setCapacidadeRecepcaoLagarPattern((Integer.parseInt(matcher.group(1))));
         }
     }
 
@@ -143,6 +141,15 @@ public class ProjetoLagarPatterns {
         while (matcher.find()) {
             entrada.setTempoMaximoExecucao(Integer.parseInt(matcher.group(2)));
         }
+    }
+
+    private static void extractDataEntrada(String texto, VariaveisEntrada entrada) {
+        Pattern dataEntradaPattern = Pattern.compile("(\\d+/\\d+)/(\\d+)");
+        Matcher matcher = dataEntradaPattern.matcher(texto);
+        while (matcher.find()) {
+            VariaveisEntrada.setDataEntrada(matcher.group(1));
+        }
+
     }
 
 }
