@@ -109,5 +109,5 @@ public class Plantacao {
     public void despacharCaminhao() {
         OrquestradorCaminhoes.encaminharParaLagar(this, this.caminhao);
     }
-    
+
 }

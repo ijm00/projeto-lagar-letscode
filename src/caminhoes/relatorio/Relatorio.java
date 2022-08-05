@@ -8,7 +8,7 @@ public class Relatorio {
     private Integer codigoPlantacao;
     private String codigoRecepcao;
     private LocalDateTime inicioViagemCaminhao;
-    private LocalDateTime fimViagemCaminhao;    
+    private LocalDateTime fimViagemCaminhao;
     private Integer capacidadeCaminhao;
     private String tipoAzeitona;
     private static Integer contadorToneladasProcessadas = 0;
@@ -68,18 +68,17 @@ public class Relatorio {
     public static void incrementarToneladasProcessadas(Integer toneladasProcessadas) {
         Relatorio.contadorToneladasProcessadas += toneladasProcessadas;
     }
-    
+
     @Override
     public String toString() {
         return String.format(
-            "%s - %04d >> %d toneladas de %s na recepcao %s de origem da plantação %d com tempo total de %d segundos.", 
-            LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")),
-            contadorToneladasProcessadas,
-            this.capacidadeCaminhao,
-            this.tipoAzeitona,
-            this.codigoRecepcao,
-            this.codigoPlantacao,
-            ChronoUnit.SECONDS.between(this.inicioViagemCaminhao, this.fimViagemCaminhao)
-            );
+                "%s - %04d >> %d toneladas de %s na recepcao %s de origem da plantação %d com tempo total de %d segundos.",
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")),
+                contadorToneladasProcessadas,
+                this.capacidadeCaminhao,
+                this.tipoAzeitona,
+                this.codigoRecepcao,
+                this.codigoPlantacao,
+                ChronoUnit.SECONDS.between(this.inicioViagemCaminhao, this.fimViagemCaminhao));
     }
 }

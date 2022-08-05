@@ -1,6 +1,6 @@
 package caminhoes;
 
-public class AguardandoRecepcaoEstado implements EstadosCaminhao{
+public class AguardandoRecepcaoEstado implements EstadosCaminhao {
     @Override
     public boolean proximo(Caminhao caminhao) {
         caminhao.setEstado(new DescarregadoProcessadoEstado());

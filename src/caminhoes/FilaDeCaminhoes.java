@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class FilaDeCaminhoes {
     private static FilaDeCaminhoes filaDeCaminhoes;
     private ConcurrentLinkedQueue<Caminhao> filaConcorrente = new ConcurrentLinkedQueue<>();
-    
+
     private FilaDeCaminhoes() {
 
     };
@@ -22,9 +22,9 @@ public class FilaDeCaminhoes {
     }
 
     public Caminhao processar() {
-            return this.filaConcorrente.poll();
+        return this.filaConcorrente.poll();
     }
-    
+
     public ConcurrentLinkedQueue<Caminhao> getFila() {
         return filaConcorrente;
     }

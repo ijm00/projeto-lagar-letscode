@@ -16,5 +16,5 @@ public class DescarregadoProcessadoEstado implements EstadosCaminhao {
     public StatusCaminhao getStatus() {
         return StatusCaminhao.DESCARREGADO_PROCESSADO;
     }
-    
+
 }

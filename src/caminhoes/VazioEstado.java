@@ -1,6 +1,6 @@
 package caminhoes;
 
-public class VazioEstado implements EstadosCaminhao{
+public class VazioEstado implements EstadosCaminhao {
     @Override
     public boolean proximo(Caminhao caminhao) {
         caminhao.setEstado(new CarregadoEstado());

@@ -21,7 +21,7 @@ public class RecepcaoLagar {
     }
 
     private static AtomicReference<String> relatorioLog = new AtomicReference<>(
-        VariaveisEntrada.dataEntrada + "\n\n");
+            VariaveisEntrada.dataEntrada + "\n\n");
 
     public void descarregarCaminhoes() {
         Caminhao caminhao = FilaDeCaminhoes.getInstance().getFila().poll();

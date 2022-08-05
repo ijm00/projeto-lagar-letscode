@@ -6,7 +6,7 @@ public interface EstadosCaminhao {
         CARREGADO,
         TRANSPORTADO,
         AGUARDANDO_NA_RECEPCAO,
-        DESCARREGADO_PROCESSADO, //estado final
+        DESCARREGADO_PROCESSADO, // estado final
         EXTINTO;
     }
 
